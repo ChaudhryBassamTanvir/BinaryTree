@@ -37,6 +37,8 @@ return newNode;
     }
 }
 
+
+
 public static void preOrder(Node root){
     if (root==null) {
         return;
@@ -45,7 +47,24 @@ public static void preOrder(Node root){
     preOrder(root.left);
     preOrder(root.right);
 }
+public static void inOrder(Node root){
+if (root==null) {
+    return;
+}
+inOrder(root.left);
+System.out.print(root.data+" ");
+inOrder(root.right);
+}
+public static void postOrder(Node root){
+if (root==null) {
+    return;
+}
+inOrder(root.left);
+inOrder(root.right);
+System.out.print(root.data+" ");
 
+
+}
 
     public static void main(String[] args) {
         int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
@@ -54,6 +73,10 @@ public static void preOrder(Node root){
      Node root=   tree.buildTree(nodes);
     // System.out.println(root.data);
 preOrder(root);
+System.out.println();
+inOrder(root);
+System.out.println();
+postOrder(root);
 
 
 }
