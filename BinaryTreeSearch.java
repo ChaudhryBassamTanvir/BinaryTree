@@ -105,12 +105,12 @@ if (currNode.right!=null) {
     
         BinaryTree tree = new BinaryTree();
      Node root=   tree.buildTree(nodes);
-    // System.out.println(root.data);
-// preOrder(root);
-// System.out.println();
-// inOrder(root);
-// System.out.println();
-// postOrder(root);
+    System.out.println(root.data);
+preOrder(root);
+System.out.println();
+inOrder(root);
+System.out.println();
+postOrder(root);
 levelOrderTraversal(root);
 }
 }
