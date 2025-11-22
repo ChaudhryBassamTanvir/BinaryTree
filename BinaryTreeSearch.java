@@ -11,11 +11,7 @@ Node(int data){
 this.data=data;
 this.left=null;
 this.right=null;
-
-
 }
-
-
 }
 
 
@@ -39,8 +35,6 @@ return newNode;
 
     }
 }
-
-
 
 public static void preOrder(Node root){
     if (root==null) {
