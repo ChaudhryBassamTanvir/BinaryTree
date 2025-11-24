@@ -94,17 +94,32 @@ if (currNode.right!=null) {
     }
 }
 
+public static int countOfNodes(Node root){
+    if (root==null) {
+return 0;        
+    }
+    
+    int leftNodes = countOfNodes(root.left);
+    
+    int rightNodes= countOfNodes(root.right);
+return leftNodes+rightNodes+1;
+}
+
+
     public static void main(String[] args) {
         int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
     
         BinaryTree tree = new BinaryTree();
      Node root=   tree.buildTree(nodes);
-    System.out.println(root.data);
-preOrder(root);
-System.out.println();
-inOrder(root);
-System.out.println();
-postOrder(root);
+    // System.out.println(root.data);
+// preOrder(root);
+// System.out.println();
+// inOrder(root);
+// System.out.println();
+// postOrder(root);
 levelOrderTraversal(root);
+
+System.out.println();
+System.out.println("The total number of Nodes are "+ countOfNodes(root));
 }
 }
