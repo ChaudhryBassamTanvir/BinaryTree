@@ -127,6 +127,20 @@ int myHeight= Math.max(leftHeight, rightHeight) +1;
 return  myHeight;
 
 }
+
+public static int diameter(Node root){
+    if (root==null) {
+        return 0;
+        
+    }
+    int diam1 = diameter(root.left);
+    int diam2= diameter(root.right);
+    int diam3 = treeHeight(root.left) + treeHeight(root.right)+1;
+
+return  Math.max(diam3, Math.max(diam1, diam2));
+
+}
+
     public static void main(String[] args) {
         int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
     
