@@ -105,7 +105,28 @@ return 0;
 return leftNodes+rightNodes+1;
 }
 
+public static int sumOfNodes(Node root){
+    if (root==null) {
+return 0;        
+    }
+    
+    int leftSum = sumOfNodes(root.left);
+    
+    int rightSum= sumOfNodes(root.right);
+return leftSum+rightSum+root.data;
+}
+public static int treeHeight(Node root){
+    if (root==null) {
+        return 0;
+        
+    }
+        int leftHeight = treeHeight(root.left);
+    
+    int rightHeight= treeHeight(root.right);
+int myHeight= Math.max(leftHeight, rightHeight) +1;
+return  myHeight;
 
+}
     public static void main(String[] args) {
         int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
     
@@ -121,5 +142,14 @@ levelOrderTraversal(root);
 
 System.out.println();
 System.out.println("The total number of Nodes are "+ countOfNodes(root));
+
+System.out.println();
+System.out.println("The sum of Nodes are "+ sumOfNodes(root));
+ 
+
+System.out.println();
+System.out.println("The height of tree is "+ treeHeight(root));
+ 
+
 }
 }
