@@ -165,5 +165,8 @@ System.out.println();
 System.out.println("The height of tree is "+ treeHeight(root));
  
 
+System.out.println();
+System.out.println("The diameter of tree is "+ diameter(root));
+
 }
 }
