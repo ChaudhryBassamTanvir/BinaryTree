@@ -153,6 +153,9 @@ this.diam=diam;
     
 }
 public static TreeInfo diameter2(Node root){
+if(root==null){
+  return  new TreeInfo(0, 0);
+}
     TreeInfo left = diameter2(root.left);
     TreeInfo right= diameter2(root.right);
     int myHeight= Math.max(left.ht, right.ht)+1;
@@ -162,6 +165,10 @@ public static TreeInfo diameter2(Node root){
 
 
     int mydiam = Math.max(Math.max(diam1, diam2), diam3);
+    TreeInfo myInfo = new TreeInfo(myHeight, mydiam);
+return myInfo;
+
+
 }
 
     public static void main(String[] args) {
@@ -190,6 +197,10 @@ System.out.println("The height of tree is "+ treeHeight(root));
 
 System.out.println();
 System.out.println("The diameter of tree is "+ diameter(root));
+
+
+System.out.println();
+System.out.println("The diameter2 of tree is "+ diameter2(root).diam);
 
 }
 }
