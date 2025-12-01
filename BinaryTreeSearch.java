@@ -128,6 +128,7 @@ return  myHeight;
 
 }
 
+//O(N^2)
 public static int diameter(Node root){
     if (root==null) {
         return 0;
@@ -152,6 +153,7 @@ this.diam=diam;
 
     
 }
+//O(N)
 public static TreeInfo diameter2(Node root){
 if(root==null){
   return  new TreeInfo(0, 0);
