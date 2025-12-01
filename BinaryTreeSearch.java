@@ -201,8 +201,12 @@ if (root==null || subroot==null) {
     return false;
     
 }
-return isIdentical(root.left, subroot.left) && isIdentical(root.right, subroot.right);
+if(root.val == subroot.val){
+ return isIdentical(root.left, subroot.left) && isIdentical(root.right, subroot.right);
 
+}
+
+return false;
 }
 
 public boolean isSubtree(TreeNode root, TreeNode subRoot){
