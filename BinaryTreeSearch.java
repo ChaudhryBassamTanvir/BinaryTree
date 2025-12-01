@@ -173,6 +173,41 @@ return myInfo;
 
 }
 
+//Find subtree in Main Tree 
+public class TreeNode{
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+        public TreeNode() {
+        }
+    TreeNode(int val){
+        this.val=val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right){
+        this.val= val;
+        this.left = left;
+        this.right=right;
+
+    }
+}
+
+
+public boolean isSubtree(TreeNode root, TreeNode subRoot){
+    if (subRoot==null) {
+        return  true;
+        
+    }
+    if (root==null) {
+        return  false;
+    }
+    if (root.val==subRoot.val) {
+
+        
+    }
+}
+
     public static void main(String[] args) {
         int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
     
