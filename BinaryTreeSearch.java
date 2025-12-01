@@ -193,7 +193,15 @@ public class TreeNode{
     }
 }
 public boolean isIdentical(TreeNode root, TreeNode subroot){
-
+if (root ==null && subroot==null) 
+    {
+    return  true;
+}
+if (root==null || subroot==null) {
+    return false;
+    
+}
+return isIdentical(root.left, subroot.left) && isIdentical(root.right, subroot.right);
 
 }
 
@@ -211,6 +219,9 @@ if (isIdentical(root, subRoot)) {
 }
         
     }
+return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
+
+
 }
 
     public static void main(String[] args) {
